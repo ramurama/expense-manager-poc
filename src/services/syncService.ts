@@ -35,7 +35,7 @@ export function defineBackgroundSyncTask() {
 // this can be called in the React components
 export function registerBackgroundSync() {
   return registerTaskAsync(BACKGROUND_SYNC_TASK, {
-    minimumInterval: 2,
+    minimumInterval: config.dataSyncInterval,
     startOnBoot: true, // android only
   })
 }
